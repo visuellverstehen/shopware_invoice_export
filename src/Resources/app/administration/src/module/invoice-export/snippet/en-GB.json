@@ -1,0 +1,37 @@
+{
+    "invoice-export": {
+        "general": {
+            "name": "Invoice Export",
+            "title": "Invoice Export",
+            "description": "Export orders for finance"
+        },
+        "navigation": {
+            "label": "Invoice Export"
+        },
+        "application": {
+            "settings": {
+                "finance": {
+                    "sectionLabel": "Tax accounts",
+                    "sevenLabel": "Revenue account 7% tax",
+                    "nineteenLabel": "Revenue account 19% tax",
+                    "debitorLabel": "Debtor",
+                    "costLabel": "Cost center"
+                },
+                "export": {
+                    "sectionLabel": "Export",
+                    "fromDateLabel": "Date from which orders should be exported",
+                    "toDateLabel": "Date  to which orders should be exported",
+                    "lastExportLabel": "Last export at"
+                }
+            },
+            "buttons": {
+                "startExportLabel": "Export invoices"
+            },
+            "errors": {
+                "noOrdersFound": "No orders found for the chosen timespan!",
+                "loadingSettings": "An error occured while loading the settings",
+                "savingSettings": "An error occured while saving the settings"
+            }
+        }
+    }
+}

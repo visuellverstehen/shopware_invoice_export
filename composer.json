@@ -1,0 +1,42 @@
+{
+    "name": "visuel/visuelinvoiceexport",
+    "description": "InvoiceExport",
+    "version": "v1.0.0",
+    "type": "shopware-platform-plugin",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "visuellverstehen GmbH"
+        }
+    ],
+    "require": {
+        "shopware/core": "*",
+        "shopware/administration": "*"
+    },
+    "extra": {
+        "shopware-plugin-class": "VisuelInvoiceExport\\VisuelInvoiceExport",
+        "plugin-icon": "src/Resources/config/plugin.png",
+        "copyright": "(c) by visuellverstehen GmbH",
+        "label": {
+            "de-DE": "Rechnungsexport Plugin",
+            "en-GB": "Invoice export plugin"
+        },
+        "manufacturerLink": {
+            "de-DE": "https://store.shopware.com/visuellverstehen.html",
+            "en-GB": "https://store.shopware.com/en/visuellverstehen.html"
+        },
+        "description": {
+            "de-DE": "Plugin für den Export von Bestelldaten im CSV-Format",
+            "en-GB": "Invoice export plugin for CSV files"
+        },
+        "supportLink": {
+            "de-DE": "https://www.visuellverstehen.de/kontakt",
+            "en-GB": "https://www.visuellverstehen.de/kontakt"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "VisuelInvoiceExport\\": "src/"
+        }
+    }
+}

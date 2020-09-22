@@ -1,0 +1,37 @@
+{
+    "invoice-export": {
+        "general": {
+            "name": "Rechnungsexport",
+            "title": "Rechnungsexport",
+            "description": "Rechnungen für die Buchhaltung exportieren"
+        },
+        "navigation": {
+            "label": "Rechnungsexport"
+        },
+        "application": {
+            "settings": {
+                "finance": {
+                    "sectionLabel": "Steuerkonten",
+                    "sevenLabel": "Erlöskonto bei 7% Steuern",
+                    "nineteenLabel": "Erlöskonto bei 19% Steuern",
+                    "debitorLabel": "Debitor",
+                    "costLabel": "Kostenstelle"
+                },
+                "export": {
+                    "sectionLabel": "Export",
+                    "fromDateLabel": "Datum,  ab dem Bestellungen exportiert werden sollen",
+                    "toDateLabel": "Datum, bis zu dem Bestellungen exportiert werden sollen",
+                    "lastExportLabel": "Letzter Export"
+                }
+            },
+            "buttons": {
+                "startExportLabel": "Rechnungen exportieren"
+            },
+            "errors": {
+                "noOrdersFound": "Für den ausgewählten Zeitraum konnten keine Bestellungen gefunden werden!",
+                "loadingSettings": "Beim Laden der Einstellungen ist ein Fehler aufgetreten",
+                "savingSettings": "Beim Speichern der Einstellungen ist ein Fehler aufgetreten"
+            }
+        }
+    }
+}

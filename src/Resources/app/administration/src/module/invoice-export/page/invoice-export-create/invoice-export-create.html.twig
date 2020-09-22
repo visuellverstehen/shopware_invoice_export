@@ -1,0 +1,71 @@
+{% block invoice_export_create %}
+    <sw-page class="invoice-export-create">
+        <template slot="content">
+            <sw-card-view>
+                <div v-if="errorMessage" class="error--message-container">
+                    <span class="error--message">{{ errorMessage }}</span>
+                </div>
+                <sw-card :title="$t('invoice-export.application.settings.finance.sectionLabel')">
+                    <sw-number-field
+                        v-model="settings.taxNumberSeven"
+                        numberType="int"
+                        :step="null"
+                        :min="null"
+                        :max="null"
+                        :value="null"
+                        :label="$t('invoice-export.application.settings.finance.sevenLabel')" />
+
+                    <sw-number-field
+                    v-model="settings.taxNumberNineteen"
+                    numberType="int"
+                    :step="null"
+                    :min="null"
+                    :max="null"
+                    :value="null"
+                    :label="$t('invoice-export.application.settings.finance.nineteenLabel')" />
+
+                    <sw-number-field
+                    v-model="settings.debitor"
+                    numberType="int"
+                    :step="null"
+                    :min="null"
+                    :max="null"
+                    :value="null"
+                    :label="$t('invoice-export.application.settings.finance.debitorLabel')"/>
+
+                    <sw-number-field
+                    v-model="settings.costNumber"
+                    numberType="int"
+                    :step="null"
+                    :min="null"
+                    :max="null"
+                    :value="null"
+                    :label="$t('invoice-export.application.settings.finance.costLabel')"/>
+                </sw-card>
+
+                <sw-card :title="$t('invoice-export.application.settings.export.sectionLabel')">
+                    <sw-datepicker
+                    id="from-date"
+                    v-model="fromDate"
+                    :label="$t('invoice-export.application.settings.export.fromDateLabel')"/>
+
+                    <sw-datepicker
+                    id="to-date"
+                    v-model="toDate"
+                    :label="$t('invoice-export.application.settings.export.toDateLabel')"/>
+
+                    <sw-container columns="1fr 1fr">
+                        <div>
+                            <sw-button variant="primary" @click="startExport">
+                                        {{$t('invoice-export.application.buttons.startExportLabel')}}
+                            </sw-button>
+                        </div>
+                        <div class="last-export--container">
+                            <p>{{$t('invoice-export.application.settings.export.lastExportLabel')}}: {{new Date(settings.lastExportAt).toLocaleDateString()}} {{new Date(settings.lastExportAt).toLocaleTimeString()}}</p>
+                        </div>
+                    </sw-container>
+                </sw-card>
+            </sw-card-view>
+        </template>
+    </sw-page>
+{% endblock %}
